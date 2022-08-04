@@ -1,0 +1,23 @@
+ALGORITHM insertion
+VAR
+    arr : ARRAY_OF INTEGER[];
+    i:INTEGER;
+    val:INTEGER;
+BEGIN
+    FOR i FROM 0 TO arr.length STEP step  DO
+        
+        read(arr[i]);
+    END_FOR
+
+    FOR i FROM 0 TO arr.length-1 STEP step  DO
+        val:=arr[i];
+        FOR j FROM i-1 TO (j>=0 and arr[j]>val) STEP step  DO
+            arr[j+1]=arr[j];
+        END_FOR
+        arr[j+1]=val;
+    END_FOR
+
+    FOR i FROM 0 TO arr.length-1 STEP step  DO
+        write(arr[i]);
+    END_FOR
+END
